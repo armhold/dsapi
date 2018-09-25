@@ -1,4 +1,4 @@
-package print
+package format
 
 import (
 	"encoding/json"
@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-func TestHorizontal(t *testing.T) {
+func TestPrint(t *testing.T) {
 	expected :=
 		`-------------------------------------------------------
 |   70|   71|   73|   75|   75|   75|   74|   73|   71|
@@ -38,7 +38,7 @@ Mostly cloudy for the hour.
 		t.Fatal(err)
 	}
 
-	actual := Horizontal(resp)
+	actual := Print(resp)
 
 	if expected != actual {
 		t.Errorf(cmp.Diff(expected, actual))

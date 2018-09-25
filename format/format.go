@@ -1,4 +1,4 @@
-package print
+package format
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ const (
 	sunriseSetFormat = "3:04pm"
 )
 
-func Horizontal(forecast dsapi.Forecast) string {
+func Print(forecast dsapi.Forecast) string {
 	currHour := time.Unix(int64(forecast.Currently.Time), 0).Hour()
 
 	// TODO: revisit if we go beyond 24 hours for maxHours

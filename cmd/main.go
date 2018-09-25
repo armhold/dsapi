@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/armhold/dsapi"
-	"github.com/armhold/dsapi/print"
+	"github.com/armhold/dsapi/format"
 	"log"
 	"os"
 	"strconv"
@@ -57,6 +57,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(print.Horizontal(forecast))
+	fmt.Println(format.Print(forecast))
 	fmt.Println("Powered by Dark Sky: https://darksky.net/poweredby/")
 }
