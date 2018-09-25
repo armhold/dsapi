@@ -50,14 +50,13 @@ func main() {
 		usage()
 	}
 
-	fmt.Printf("using lat: %f, long: %f\n", lat, long)
+	fmt.Printf("Forecast for lat: %f, long: %f:\n\n", lat, long)
 
 	forecast, err := dsapi.GetForecast(apiKey, lat, long, []dsapi.Exclude{})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Print(print.Horizontal(forecast))
-
-	fmt.Println("\nPowered by Dark Sky: https://darksky.net/poweredby/")
+	fmt.Println(print.Horizontal(forecast))
+	fmt.Println("Powered by Dark Sky: https://darksky.net/poweredby/")
 }

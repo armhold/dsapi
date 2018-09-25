@@ -10,17 +10,18 @@ import (
 
 func TestHorizontal(t *testing.T) {
 	expected :=
-		`|   70|   71|   73|   75|   75|   75|   74|   73|   71|
+		`-------------------------------------------------------
+|   70|   71|   73|   75|   75|   75|   74|   73|   71|
 |   ⛅|   ⛅|   ⛅|   ☀️ |   ☀️ |   ☀️ |   ☀️ |   ☀️ |   🌒|
 |  Now| 12pm|  1pm|  2pm|  3pm|  4pm|  5pm|  6pm|  7pm|
 -------------------------------------------------------
-Mostly Cloudy
+ Mostly Cloudy
 
-Feels like:        70°  |   Sunrise:         6:25am
-Precipitation:      5%  |   Sunset:          6:55pm
-Humidity:          85%  |   Wind:            1mph
-Dew Point:         65°  |   UV Index:        5
-Cloud Cover:       67%  |
+ Feels like:        70°  |   Sunrise:         6:25am
+ Precipitation:      5%  |   Sunset:          6:55pm
+ Humidity:          85%  |   Wind:            1mph
+ Dew Point:         65°  |   UV Index:        5
+ Cloud Cover:       67%  |
 
 -------------------------------------------------------
 Mostly cloudy for the hour.

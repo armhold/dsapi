@@ -24,7 +24,7 @@ func Horizontal(forecast dsapi.Forecast) string {
 	tempLine := "|"
 	hourLine := "|"
 	spacerLine := "|"
-	bottomLine := "-------------------------------------------------------"
+	border := "-------------------------------------------------------"
 
 	for i := 0; i < len(forecast.Hourly.Data) && i < maxHours; i++ {
 		hour := time.Unix(int64(forecast.Hourly.Data[i].Time), 0).Hour()
@@ -42,26 +42,39 @@ func Horizontal(forecast dsapi.Forecast) string {
 
 	cond := "\n"
 
-	cond += fmt.Sprintf("Feels like: %9d°  |   Sunrise: %14s\n",
+	cond += fmt.Sprintf(" Feels like: %9d°  |   Sunrise: %14s\n",
 		roundedTemp(forecast.Currently.ApparentTemperature),
 		formatSunriseSet(forecast.Daily.Data[0].SunriseTime))
 
-	cond += fmt.Sprintf("Precipitation: %6d%%  |   Sunset: %15s\n",
+	cond += fmt.Sprintf(" Precipitation: %6d%%  |   Sunset: %15s\n",
 		roundedProb(forecast.Currently.PrecipProbability*100),
 		formatSunriseSet(forecast.Daily.Data[0].SunsetTime))
 
-	cond += fmt.Sprintf("Humidity: %11d%%  |   Wind: %12dmph\n",
+	cond += fmt.Sprintf(" Humidity: %11d%%  |   Wind: %12dmph\n",
 		roundedProb(forecast.Currently.Humidity*100),
 		roundedProb(forecast.Currently.WindSpeed))
 
-	cond += fmt.Sprintf("Dew Point: %10d°  |   UV Index: %8d\n",
+	cond += fmt.Sprintf(" Dew Point: %10d°  |   UV Index: %8d\n",
 		roundedProb(forecast.Currently.DewPoint),
 		roundedProb(forecast.Currently.UVIndex))
 
-	cond += fmt.Sprintf("Cloud Cover: %8d%%  |\n",
+	cond += fmt.Sprintf(" Cloud Cover: %8d%%  |\n",
 		roundedProb(forecast.Currently.CloudCover*100))
 
-	return strings.Join([]string{tempLine, spacerLine, hourLine, bottomLine, forecast.Currently.Summary, cond, bottomLine, forecast.Minutely.Summary, ""}, "\n")
+	currSummary := fmt.Sprintf(" %s", forecast.Currently.Summary)
+
+	return strings.Join([]string{
+		border,
+		tempLine,
+		spacerLine,
+		hourLine,
+		border,
+		currSummary,
+		cond,
+		border,
+		forecast.Minutely.Summary,
+		""},
+		"\n")
 }
 
 func formatSunriseSet(unixTime int) string {
