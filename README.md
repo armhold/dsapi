@@ -2,11 +2,6 @@
 
 It includes an example client suitable for use on the command line. 
 
-## Usage
-
-[Sign up](https://darksky.net/dev/register) and get a developer key. 
-They offer a free key good for 1000 calls/day.
-
 ```
 dsapi 34.09,-118.41
 Forecast for lat: 34.090000, long: -118.410000:
@@ -29,6 +24,12 @@ Partly cloudy for the hour.
 
 Powered by Dark Sky: https://darksky.net/poweredby/
 ```
+
+## Usage
+
+[Sign up](https://darksky.net/dev/register) and get a developer key. 
+They offer a free key good for 1000 calls/day.
+
 
 ### Build/Installation
 ```
