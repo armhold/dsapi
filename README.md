@@ -46,7 +46,7 @@ DARK_SKY_APIKEY=<YOUR_API_KEY> dsapi 41.47,-81.67
 How can you get a Lat/Long? Google Maps is handy. Right click on the map,
 select "What's here?" At the bottom of your screen will be
 
-![Google Maps Image](https://github.com/armhold/dsapi/map.png)
+![Google Maps Image](https://github.com/armhold/dsapi/blob/master/map.png)
 
 If you install my zip code to lat/long tool [z2ll](https://github.com/armhold/z2ll) tool, 
 you can do things like:
