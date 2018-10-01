@@ -16,9 +16,8 @@ Forecast for lat: 34.090000, long: -118.410000:
  Feels like:        62°  |   Sunrise:         9:45am
  Precipitation:      0%  |   Sunset:          9:46pm
  Humidity:          77%  |   Wind:            1mph
- Dew Point:         55°  |   UV Index:        0
- Cloud Cover:       38%  |
-
+ Cloud Cover:       38%  |   UV Index:        0
+ 
 -------------------------------------------------------
 Partly cloudy for the hour.
 
