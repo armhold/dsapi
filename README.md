@@ -1,6 +1,6 @@
-# dsapi is a golang client API for accessing the [Dark Sky API](https://darksky.net/dev/docs) 
+## dsapi
 
-It includes an example client suitable for use on the command line. 
+dsapi is a golang client API for accessing the [Dark Sky API](https://darksky.net/dev/docs). It includes an example client suitable for use on the command line. 
 
 ```
 dsapi 34.09,-118.41
