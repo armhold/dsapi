@@ -20,8 +20,7 @@ func TestPrint(t *testing.T) {
  Feels like:        70°  |   Sunrise:         6:25am
  Precipitation:      5%  |   Sunset:          6:55pm
  Humidity:          85%  |   Wind:            1mph
- Dew Point:         65°  |   UV Index:        5
- Cloud Cover:       67%  |
+ Cloud Cover:       67%  |   UV Index:        5
 
 -------------------------------------------------------
 Mostly cloudy for the hour.
